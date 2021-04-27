@@ -2,6 +2,11 @@
   padding: 25px;
   box-sizing: border-box;
 }
+.day {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
 .dayClock {
   display: flex;
   align-items: center;
@@ -90,4 +95,28 @@
   font-size: 18px;
   margin-top: 15px;
   padding: 5px 7px;
+}
+.dayList {
+  display: flex;
+  align-items: center;
+}
+.dayList li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 25px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  padding: 8px 10px;
+}
+.dayList li:hover {
+  border-radius: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+}
+.dayList li p {
+  font-size: 25px;
+  margin-top: 0;
+  margin-bottom: 7px;
+  font-weight: 600;
 }
