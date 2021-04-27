@@ -12,3 +12,82 @@
   font-weight: 600;
   font-style: italic;
 }
+.dayBtn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.day {
+  position: relative;
+}
+.addDay {
+  position: absolute;
+  top: 25px;
+  left: 20px;
+  width: 240px;
+  height: 250px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  border-top-left-radius: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 20px;
+}
+.addDay-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.addDay-header__close {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+.addDay-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.addDay-form input:first-child {
+  background-color: transparent;
+  font-size: 20px;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid white;
+  margin-bottom: 20px;
+  color: white;
+  padding: 5px;
+}
+.addDay-form input:first-child::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+.addDay-form__date {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.addDay-form__date input {
+  margin-left: 15px;
+}
+.addDay-form__btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.addDay-form__btns button {
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 10px;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  margin-top: 15px;
+  padding: 5px 7px;
+}

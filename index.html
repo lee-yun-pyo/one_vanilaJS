@@ -19,8 +19,26 @@
       <div class="dayClock">
         <div class="day">
           <button class="dayBtn">
-            <i class="fas fa-plus-circle"></i>
+            <i class="fas fa-plus-circle fa-lg"></i>
           </button>
+          <div class="addDay hidden">
+            <div class="addDay-header">
+              <button class="addDay-header__close">
+                <i class="fas fa-times fa-2x"></i>
+              </button>
+              <h2 class="addDay-header__title">D-day</h2>
+            </div>
+            <form class="addDay-form">
+              <input type="text" placeholder="title" />
+              <div class="addDay-form__date">
+                <h3>date</h3>
+                <input type="date" class="calendar" />
+              </div>
+              <div class="addDay-form__btns">
+                <button>cancle</button><button>okay</button>
+              </div>
+            </form>
+          </div>
           <ul class="dayList"></ul>
         </div>
         <div class="clock">
@@ -46,6 +64,7 @@
     <script src="js/name.js"></script>
     <script src="js/weather.js"></script>
     <script src="js/clock.js"></script>
+    <script src="js/dday.js"></script>
     <script
       src="https://kit.fontawesome.com/6478f529f2.js"
       crossorigin="anonymous"
