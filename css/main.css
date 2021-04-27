@@ -1,0 +1,14 @@
+#main {
+  padding: 25px;
+  box-sizing: border-box;
+}
+.dayClock {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.clock p {
+  font-size: 30px;
+  font-weight: 600;
+  font-style: italic;
+}

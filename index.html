@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>LEE's project</title>
-    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header id="name">
@@ -16,7 +16,17 @@
       <h1 class="nameText hidden"></h1>
     </header>
     <main id="main">
-      <p>ahfl;</p>
+      <div class="dayClock">
+        <div class="day">
+          <button class="dayBtn">
+            <i class="fas fa-plus-circle"></i>
+          </button>
+          <ul class="dayList"></ul>
+        </div>
+        <div class="clock">
+          <p class="clock-text">00:00:00</p>
+        </div>
+      </div>
     </main>
     <section id="menu" class="hidden">
       <div class="menu-header">
@@ -35,6 +45,7 @@
     <script src="js/menu.js"></script>
     <script src="js/name.js"></script>
     <script src="js/weather.js"></script>
+    <script src="js/clock.js"></script>
     <script
       src="https://kit.fontawesome.com/6478f529f2.js"
       crossorigin="anonymous"
