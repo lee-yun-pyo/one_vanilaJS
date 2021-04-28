@@ -29,7 +29,12 @@
               <h2 class="addDay-header__title">D-day</h2>
             </div>
             <form class="addDay-form">
-              <input type="text" placeholder="title" required />
+              <input
+                type="text"
+                placeholder="title (max : 10)"
+                required
+                maxlength="10"
+              />
               <div class="addDay-form__date">
                 <h3>date</h3>
                 <input type="date" class="calendar" required />
@@ -41,6 +46,9 @@
             </form>
           </div>
           <ul class="dayList"></ul>
+          <button class="editBtn hidden">
+            <i class="fas fa-edit fa-lg"></i>
+          </button>
         </div>
         <div class="clock">
           <p class="clock-text">00:00:00</p>
