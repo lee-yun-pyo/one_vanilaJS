@@ -1,6 +1,9 @@
 #main {
   padding: 0px 25px;
   box-sizing: border-box;
+  border-radius: 25px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
 }
 .day {
   display: flex;
