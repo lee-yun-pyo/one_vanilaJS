@@ -1,0 +1,65 @@
+.toDoList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.toDoInput {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  border-bottom: 2px solid white;
+  font-size: 20px;
+  padding: 10px;
+  padding-top: 10px;
+  /* margin-top: 10px; */
+  text-align: center;
+}
+.lists {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.toDoApps {
+  display: flex;
+  justify-content: space-around;
+}
+
+.pendingList,
+.finishList {
+  margin-top: 20px;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  width: 250px;
+  height: 280px;
+  padding: 15px;
+}
+.pendingSection {
+  margin-right: 20px;
+}
+.pending,
+.finished {
+  text-align: center;
+}
+.pendingList li,
+.finishList li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.pendingList li button,
+.finishList li button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 18px;
+}
+.pendingList li button:hover,
+.finishList li button:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 20px;
+}
+.pendingList li span {
+  font-size: 20px;
+}
