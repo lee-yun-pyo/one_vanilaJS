@@ -1,7 +1,8 @@
 const API_KEY ="b36e8b73b3528c0bfa974e10f3240ce0";
-const weatherPlace= document.querySelector(".weather-title p");
+const weatherPlace= document.querySelector(".weather-name");
 const weatehrTemp = document.querySelector(".weather-temp");
 const weatherHum = document.querySelector(".weather-hum");
+const weatherIcon = document.querySelector(".weather-icon");
 
 const COORDS = "coords";
 
@@ -14,9 +15,13 @@ function getWeather(log, lat) {
         const temp = json.main.temp;
         const place = json.name;
         const humid = json.main.humidity;
-        weatehrTemp.innerText = `Temperaute: ${temp}°C`;
-        weatherPlace.innerText = `Your place is ${place}`;
-        weatherHum.innerText = `Humidity: ${humid}%`;
+        const icon = json.weather[0].icon;
+        console.log(icon)
+        weatherIcon.src = `http://openweathermap.org/img/wn/${icon}@2x.png`;
+        console.log(weatherIcon.src);
+        weatehrTemp.innerText = `${Math.ceil(temp)}°`;
+        weatherPlace.innerText = `${place}`;
+        weatherHum.innerText = `${humid}%`;
     })
 }
 

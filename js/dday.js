@@ -6,7 +6,6 @@ const dayAddBtn = document.querySelector(".dayBtn"),
   ddayDate = document.querySelector(".calendar"),
   ddayBtn = document.querySelector(".addDay-form__btns input[type=submit]"),
   dayList = document.querySelector(".dayList"),
-  editBtn = document.querySelector(".editBtn"),
   deleteBtn = document.querySelector(".deleteDay");
 
 const DDAY = "dday";

@@ -1,0 +1,30 @@
+.calendar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  width: 180px;
+  height: 180px;
+  text-align: center;
+  border-radius: 20px;
+}
+.calendar_day {
+  padding-top: 25px;
+  margin: 0;
+  font-size: 30px;
+}
+.calendar_date {
+  font-size: 65px;
+  font-weight: 600;
+  margin: 0;
+}
+.calendar_month {
+  background-color: white;
+  color: black;
+  padding: 5px;
+  margin: 0;
+  font-size: 30px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
