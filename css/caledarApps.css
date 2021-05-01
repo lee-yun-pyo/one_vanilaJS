@@ -1,11 +1,18 @@
+.calenarApps {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
 .calendar {
   display: flex;
   flex-direction: column;
   justify-content: center;
   background-color: rgba(0, 0, 0, 0.8);
   color: white;
-  width: 180px;
-  height: 180px;
+  width: 170px;
+  height: 170px;
   text-align: center;
   border-radius: 20px;
 }
@@ -27,4 +34,21 @@
   font-size: 30px;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
+}
+.apps-row:first-child {
+  margin-bottom: 20px;
+}
+.apps-btn img {
+  width: 70px;
+  height: 70px;
+  margin-left: 20px;
+  border-radius: 20px;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.apps-btn img:hover {
+  transform: var(--scaleOne);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+.apps-row a:first-child img {
+  margin-left: 0;
 }

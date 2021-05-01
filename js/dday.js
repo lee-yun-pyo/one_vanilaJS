@@ -1,12 +1,12 @@
 const dayAddBtn = document.querySelector(".dayBtn"),
   addModal = document.querySelector(".addDay"),
+  dDayForm = document.querySelector(".addDay-form"),
+  addDdayTitle = document.querySelector(".addDay-form input[type=text]"),
+  ddayDate = document.querySelector(".addDay-form__date input[type=date]"),
   closeBtn = document.querySelector(".addDay-header__close"),
   cancleBtn = document.querySelector(".addDay-form__btns button"),
-  ddayTitle = document.querySelector(".addDay-form input[type=text]"),
-  ddayDate = document.querySelector(".calendar"),
   ddayBtn = document.querySelector(".addDay-form__btns input[type=submit]"),
-  dayList = document.querySelector(".dayList"),
-  deleteBtn = document.querySelector(".deleteDay");
+  dayList = document.querySelector(".dayList");
 
 const DDAY = "dday";
 const oneDay = 86400000;
@@ -74,8 +74,8 @@ function askForDday(event) {
   const dDate = new Date(ddayYear, ddayMonth, ddayDay);
   const dDateMilli = dDate.getTime();
   const dday = Math.floor((todayMilli - dDateMilli) / oneDay);
-  const dTitle = ddayTitle.value;
-  ddayTitle.value = "";
+  const dTitle = addDdayTitle.value;
+  addDdayTitle.value = "";
   paintDday(dday, dTitle);
 }
 
@@ -115,7 +115,7 @@ function init() {
       paintDday(day.dday, day.title);
     });
   }
-  ddayBtn.addEventListener("click", askForDday);
+  dDayForm.addEventListener("submit", askForDday);
 }
 
 init();

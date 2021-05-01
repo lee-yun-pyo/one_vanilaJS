@@ -1,6 +1,6 @@
-const menuBtn = document.querySelector("#name i");
-const menuBar = document.querySelector("#menu");
-const menuCloseBtn = document.querySelector("#menu i");
+const menuBtn = document.querySelector("#name i"),
+ menuBar = document.querySelector("#menu"),
+ menuCloseBtn = document.querySelector("#menu i");
 
 const HIDDEN = "hidden";
 

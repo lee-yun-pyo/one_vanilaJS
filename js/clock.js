@@ -1,7 +1,7 @@
-const clock = document.querySelector(".clock-text");
-const calDate = document.querySelector(".calendar_date");
-const calDay = document.querySelector(".calendar_day");
-const calMonth = document.querySelector(".calendar_month");
+const clock = document.querySelector(".clock-text"),
+ calDate = document.querySelector(".calendar_date"),
+ calDay = document.querySelector(".calendar_day"),
+ calMonth = document.querySelector(".calendar_month");
 
 const 요일 = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
 const 달 = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"];

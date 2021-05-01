@@ -1,0 +1,6 @@
+:root {
+  --whiteGray: rgba(255, 255, 255, 0.5);
+  --blackGray: rgba(0, 0, 0, 0.5);
+  --scaleOne: scale(1.1);
+  --scaleTwo: scale(1.2);
+}

@@ -74,15 +74,13 @@ function paintFinDos(value) {
   divBtn.appendChild(finBtn);
   const finId = finDos.length + 1;
   span.innerText = value;
-  finBtn.innerText = "❗";
+  finBtn.innerText = "↩";
   delBtn.innerText = "❌";
   delBtn.addEventListener("click", deleteFinished);
   finBtn.addEventListener("click", moveToDos);
   li.id = finId;
   li.appendChild(span);
   li.appendChild(divBtn);
-  // li.appendChild(delBtn);
-  // li.appendChild(finBtn);
   finishList.appendChild(li);
   const finObj = {
     text: value,

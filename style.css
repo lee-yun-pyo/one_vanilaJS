@@ -1,8 +1,14 @@
-@import "css/index.css";
-@import "css/main.css";
+@import "css/name.css";
+@import "css/ddayClock.css";
 @import "css/toDos.css";
 @import "css/menu.css";
 @import "css/caledarApps.css";
+@import "variable.css";
+@import url("https://fonts.googleapis.com/css2?family=Arimo&display=swap");
+
+* {
+  font-family: "Arimo", sans-serif;
+}
 
 .hidden {
   display: none;

@@ -12,8 +12,11 @@
   font-size: 20px;
   padding: 10px;
   padding-top: 10px;
-  /* margin-top: 10px; */
   text-align: center;
+  transition: all 0.2s ease-in-out;
+}
+.toDoInput:focus {
+  border-bottom: 2px solid var(--blackGray);
 }
 .lists {
   display: flex;
@@ -29,7 +32,7 @@
 .pendingList,
 .finishList {
   margin-top: 20px;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: var(--blackGray);
   border-radius: 10px;
   width: 250px;
   height: 280px;
@@ -47,6 +50,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  color: white;
+  margin-bottom: 5px;
 }
 .pendingList li button,
 .finishList li button {
@@ -57,7 +62,7 @@
 }
 .pendingList li button:hover,
 .finishList li button:hover {
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: var(--whiteGray);
   border-radius: 20px;
 }
 .pendingList li span {

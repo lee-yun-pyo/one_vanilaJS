@@ -1,12 +1,14 @@
-const hiName = document.querySelector(".nameText");
-const form = document.querySelector(".nameAsk");
-const askName = form.querySelector(".name");
+const hiName = document.querySelector(".nameText"); // h1
+const form = document.querySelector(".nameAsk"); // form
+const askName = form.querySelector(".name"); // input[text]
 const editBtn = document.querySelector(".name-edit");
-const nameHeader = document.querySelector(".nameTitle");
+const nameTitle = document.querySelector(".nameTitle"); //div
+
+const NAME = "name";
 
 function resetName() {
-    localStorage.removeItem("name");
-    nameHeader.classList.add(HIDDEN);
+    localStorage.removeItem(NAME);
+    nameTitle.classList.add(HIDDEN);
     askName.value = "";
     form.classList.remove(HIDDEN);
     form.addEventListener("submit", handleName);
@@ -20,26 +22,24 @@ function hiddenEditBtn() {
     editBtn.classList.add(HIDDEN);
 }
 function saveName(text) {
-    localStorage.setItem("name", text);
-}
-
-function handleName(event) {
-    const name = askName.value;
-    event.preventDefault();
-    nameHeader.classList.remove(HIDDEN);
-    paintName(name);
-    saveName(name);
+    localStorage.setItem(NAME, text);
 }
 function paintName(text) {
+    nameTitle.classList.remove(HIDDEN);
     form.classList.add(HIDDEN);
     hiName.classList.remove(HIDDEN);
     hiName.innerText = `Hi! ${text}`;
-    nameHeader.classList.remove(HIDDEN);
-    nameHeader.addEventListener("mouseenter", showEditBtn);
-    nameHeader.addEventListener("mouseleave", hiddenEditBtn);
+    nameTitle.addEventListener("mouseenter", showEditBtn);
+    nameTitle.addEventListener("mouseleave", hiddenEditBtn);
+}
+function handleName(event) {
+    event.preventDefault();
+    const name = askName.value;
+    paintName(name);
+    saveName(name);
 }
 function init() {
-    const nameLS = localStorage.getItem("name");
+    const nameLS = localStorage.getItem(NAME);
     if(nameLS === null) {
         form.addEventListener("submit", handleName);
     } else {

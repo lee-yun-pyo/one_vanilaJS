@@ -1,5 +1,4 @@
 const body = document.querySelector("body");
-const main = document.querySelector("main");
 
 const IMG_NUM = 7;
 
@@ -8,7 +7,6 @@ function paintImg(randomNum) {
     image.src = `screenshot/${randomNum + 1}.jpg`;
     image.classList.add("backImg");
     body.appendChild(image);
-    // main.appendChild(image);
 }
 
 function getRandom() {

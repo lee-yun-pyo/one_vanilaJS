@@ -25,24 +25,27 @@
 .clock p {
   font-size: 30px;
   font-weight: 600;
-  font-style: italic;
-  /* margin: 0; */
 }
 .dayBtn {
   background-color: transparent;
+  border-radius: 50%;
   border: none;
   cursor: pointer;
+  transition: all 0.1s ease-in-out;
+}
+.dayBtn:hover {
+  transform: var(--scaleTwo);
 }
 .day {
   position: relative;
 }
 .addDay {
   position: absolute;
-  top: 60px;
+  top: 23px;
   left: 25px;
   width: 240px;
   height: 250px;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.9);
   border-radius: 20px;
   border-top-left-radius: 0;
   z-index: 1;
@@ -87,7 +90,7 @@
   padding: 5px;
 }
 .addDay-form input:first-child::placeholder {
-  color: rgba(255, 255, 255, 0.5);
+  color: var(--whiteGray);
 }
 .addDay-form__date {
   display: flex;
@@ -112,6 +115,7 @@
   outline: none;
   font-size: 18px;
   padding: 5px 7px;
+  font-weight: 600;
 }
 .addDay-form__btns button {
   margin-right: 10px;
@@ -129,7 +133,7 @@
   justify-content: center;
   align-items: center;
   margin-right: 25px;
-  transition: background-color 0.2s ease-in-out;
+  transition: border 0.2s ease-in-out;
   padding: 8px 10px;
   animation: fadeIn 1s ease-in-out forwards;
 }
@@ -142,9 +146,9 @@
   }
 }
 .dayList li:hover {
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: var(--whiteGray);
   border-radius: 10px;
-  border: 3px solid black;
+  border: 2px solid black;
 }
 .dayList li p {
   font-size: 25px;
@@ -165,5 +169,5 @@
   transition: all 0.2s ease-in-out;
 }
 .dayList li button:hover {
-  transform: scale(1.2);
+  transform: var(--scaleOne);
 }
