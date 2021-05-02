@@ -40,7 +40,6 @@ function paintDday(dday, dTitle) {
   icon.classList.add("fa-times-circle");
   icon.classList.add("fa-lg");
   delBtn.appendChild(icon);
-  // delBtn.innerText = "d";
   delBtn.classList.add(HIDDEN);
   delBtn.addEventListener("click", deleteDday);
   const newDayId = ddayArray.length + 1;

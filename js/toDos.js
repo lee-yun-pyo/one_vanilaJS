@@ -107,8 +107,6 @@ function paintToDos(value) {
   li.id = newId;
   li.appendChild(span);
   li.appendChild(divBtn);
-  // li.appendChild(delBtn);
-  // li.appendChild(finBtn);
   pendingList.appendChild(li);
   const toDoObj = {
     text: value,
