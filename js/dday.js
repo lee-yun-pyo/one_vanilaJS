@@ -9,7 +9,7 @@ const dayAddBtn = document.querySelector(".dayBtn"),
   dayList = document.querySelector(".dayList");
 
 const DDAY = "dday";
-const oneDay = 86400000;
+const ONEDAY = 86400000;
 let ddayArray = [];
 
 function deleteDday(event) {
@@ -33,7 +33,7 @@ function saveDday(text) {
 function paintDday(dDateMilli, dTitle) {
   const today = new Date();
   const todayMilli = today.getTime();
-  const dday = Math.floor((todayMilli - dDateMilli) / oneDay);
+  const dday = Math.floor((todayMilli - dDateMilli) / ONEDAY);
   const li = document.createElement("li");
   const spanDay = document.createElement("p");
   const spanTitle = document.createElement("span");
@@ -54,7 +54,7 @@ function paintDday(dDateMilli, dTitle) {
   li.id = newDayId;
   dayList.appendChild(li);
   const ddayObj = {
-    dday: dday,
+    dday: dDateMilli,
     title: dTitle,
     id: newDayId
   };
@@ -66,10 +66,6 @@ function paintDday(dDateMilli, dTitle) {
 
 function askForDday(event) {
   event.preventDefault();
-
-  // const today = new Date();
-  // const todayMilli = today.getTime();
-
   const ddayValue = ddayDate.value;
   ddayDate.value = "";
   const ddayYear = parseInt(ddayValue.slice(0, 4));
@@ -77,12 +73,8 @@ function askForDday(event) {
   const ddayDay = parseInt(ddayValue.slice(-2));
   const dDate = new Date(ddayYear, ddayMonth, ddayDay);
   const dDateMilli = dDate.getTime();
-
-  // const dday = Math.floor((todayMilli - dDateMilli) / oneDay);
-
   const dTitle = addDdayTitle.value;
   addDdayTitle.value = "";
-
   paintDday(dDateMilli, dTitle);
 }
 
