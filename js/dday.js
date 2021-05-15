@@ -30,7 +30,10 @@ function saveDday(text) {
   localStorage.setItem(DDAY, JSON.stringify(text));
 }
 
-function paintDday(dday, dTitle) {
+function paintDday(dDateMilli, dTitle) {
+  const today = new Date();
+  const todayMilli = today.getTime();
+  const dday = Math.floor((todayMilli - dDateMilli) / oneDay);
   const li = document.createElement("li");
   const spanDay = document.createElement("p");
   const spanTitle = document.createElement("span");
@@ -63,8 +66,10 @@ function paintDday(dday, dTitle) {
 
 function askForDday(event) {
   event.preventDefault();
-  const today = new Date();
-  const todayMilli = today.getTime();
+
+  // const today = new Date();
+  // const todayMilli = today.getTime();
+
   const ddayValue = ddayDate.value;
   ddayDate.value = "";
   const ddayYear = parseInt(ddayValue.slice(0, 4));
@@ -72,10 +77,13 @@ function askForDday(event) {
   const ddayDay = parseInt(ddayValue.slice(-2));
   const dDate = new Date(ddayYear, ddayMonth, ddayDay);
   const dDateMilli = dDate.getTime();
-  const dday = Math.floor((todayMilli - dDateMilli) / oneDay);
+
+  // const dday = Math.floor((todayMilli - dDateMilli) / oneDay);
+
   const dTitle = addDdayTitle.value;
   addDdayTitle.value = "";
-  paintDday(dday, dTitle);
+
+  paintDday(dDateMilli, dTitle);
 }
 
 function showDayModal() {
