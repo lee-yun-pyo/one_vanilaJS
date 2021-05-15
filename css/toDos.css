@@ -65,6 +65,3 @@
   background-color: var(--whiteGray);
   border-radius: 20px;
 }
-.pendingList li span {
-  font-size: 20px;
-}
